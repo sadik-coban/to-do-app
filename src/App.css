@@ -1,0 +1,181 @@
+:root {
+  --bg-body: #fafafa;
+  --bg-todo: #ffffff;
+  --text-primary: hsl(234, 11%, 52%);
+  --border-color: hsl(232, 38%, 84%);
+  --shadow-color: rgba(56, 56, 56, 0.52);
+  --text-secondary: hsl(220, 98%, 61%);
+  --footer-text: hsl(231, 10%, 28%);
+}
+[data-theme="dark"] {
+  --bg-body: hsl(235, 21%, 11%);
+  --bg-todo: #25273c;
+  --text-primary: hsl(234, 11%, 52%);
+  --shadow-color: rgba(0, 0, 0, 0.52);
+  --border-color: hsl(233, 13%, 39%);
+  --text-secondary: hsl(220, 98%, 61%);
+  --footer-text: hsl(231, 10%, 28%);
+}
+body {
+  background-color: var(--bg-body);
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+.toggle-theme-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.toggle-theme-btn img {
+  display: inline;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+.intro {
+  padding: 40px 25px 0px 25px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.todo-header {
+  font-weight: 400;
+  color: white;
+}
+
+.create-to-do {
+  margin: 25px 20px 15px 20px;
+  padding: 15px 15px 15px 15px;
+  border-radius: 7px;
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-todo);
+  box-shadow: -1px -3px 20px 7px var(--shadow-color);
+  -webkit-box-shadow: -1px -3px 20px 7px var(--shadow-color);
+  -moz-box-shadow: -1px -3px 20px 7px var(--shadow-color);
+}
+
+.create-to-do input {
+  all: unset;
+}
+.delete-btn {
+  all: unset;
+  display: none;
+}
+.to-do-item {
+  padding: 15px 15px 15px 15px;
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-todo);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.to-do-item:hover .delete-btn {
+  display: inline-block;
+}
+
+.to-do-container {
+  margin: 25px 20px 0px 20px;
+  border-radius: 7px;
+  border-radius: 12px;
+  box-shadow: -1px -3px 20px 7px var(--shadow-color);
+  -webkit-box-shadow: -1px -3px 20px 7px var(--shadow-color);
+  -moz-box-shadow: -1px -3px 20px 7px var(--shadow-color);
+}
+
+.bot-part {
+  margin: 0px 20px 15px 20px;
+  padding: 15px 15px 15px 15px;
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-todo);
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 12px 15px 5px var(--shadow-color);
+  -webkit-box-shadow: 1px 12px 15px 5px var(--shadow-color);
+  -moz-box-shadow: 1px 12px 15px 5px var(--shadow-color);
+}
+
+.clear-btn {
+  all: unset;
+}
+
+.filter-part {
+  margin: 0px 20px 15px 20px;
+  padding: 15px 15px 15px 15px;
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-todo);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 1px 11px 14px -1px var(--shadow-color);
+  -webkit-box-shadow: 1px 11px 14px -1px var(--shadow-color);
+  -moz-box-shadow: 1px 11px 14px -1px var(--shadow-color);
+}
+
+.footer {
+  margin: 30px 20px 15px 20px;
+
+  color: var(--footer-text);
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.circle {
+  all: unset;
+  cursor: pointer;
+  min-width: 25px;
+  min-height: 25px;
+  border: solid 1.5px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(var(--bg-todo), var(--bg-todo)),
+    linear-gradient(to right, hsl(234, 11%, 52%), hsl(234, 11%, 52%));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.circle:hover {
+  background-image: linear-gradient(var(--bg-todo), var(--bg-todo)),
+    linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
