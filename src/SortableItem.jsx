@@ -54,12 +54,3 @@ export function SortableItem(props) {
     </div>
   );
 }
-
-{
-  /* <button style={props.styleBtns} onClick={props.onClickCompleted}>
-completed
-</button>
-<button style={props.styleBtns} onClick={props.onClick}>
-x
-</button> */
-}
