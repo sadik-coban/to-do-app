@@ -392,25 +392,3 @@ function App() {
 }
 
 export default App;
-
-// function DeleteTodo(id) {
-//   setTodo((prev) => [
-//     ...prev.slice(0, id - 1),
-//     ...prev.slice(id, todos.length),
-//   ]);
-//   let arr = [...Array(todos.length - 1).keys()].map((x) => ++x);
-//   console.log(arr);
-//   setItems((prev) => [
-//     ...prev.slice(0, id - 1),
-//     ...[...Array(todos.length).keys()].slice(id),
-//   ]);
-
-//   SETTODOLIST((prev) => [
-//     ...prev.slice(0, id - 1),
-//     ...prev.slice(id, todos.length),
-//   ]);
-//   SETITEMSLIST((prev) => [
-//     ...prev.slice(0, id - 1),
-//     ...[...Array(todos.length).keys()].slice(id),
-//   ]);
-// }
